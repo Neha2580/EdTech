@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentors - Mentorship Program</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #6473B6;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .home-button {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 8px 16px;
+      background-color: #333;
+      border-radius: 5px;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .home-button:hover {
+      background-color: #555;
+    }
+
+    /* Mentors Section */
+    .mentors-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .mentors-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #6473B6;
+    }
+
+    .mentors-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .mentor-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mentor-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .mentor-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .mentor-card-content {
+      padding: 20px;
+    }
+
+    .mentor-card h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #6473B6;
+    }
+
+    .mentor-card p {
+      margin: 10px 0;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .mentor-card .expertise {
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="/" class="home-button">Home</a>
+    <h1>Our Mentors</h1>
+  </header>
+
+  <!-- Mentors Section -->
+  <section class="mentors-section">
+    <h2>Meet Our Expert Mentors</h2>
+    <div class="mentors-grid">
+      <!-- Mentor Card 1 -->
+      <div class="mentor-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7UrUIE2jIyJiQyQsC5k36ZyXe6dgAtzHfVz7u1_4UwAk4eFFW22x-CUDT8EcorJ-HH8g&usqp=CAU" alt="Mentor 1">
+        <div class="mentor-card-content">
+          <h3>John Doe</h3>
+          <p class="expertise">Expertise: Mathematics</p>
+          <p>John is a passionate math tutor with over 10 years of experience. He specializes in algebra and calculus.</p>
+        </div>
+      </div>
+
+      <!-- Mentor Card 2 -->
+      <div class="mentor-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgxuDIVLaKcVgUc2RpYiK76AvGA0SsghJ3cHpqMpIu7rt4ObSPRb2p1gLD-yQcTvvqhlA&usqp=CAU" alt="Mentor 2">
+        <div class="mentor-card-content">
+          <h3>Jane Smith</h3>
+          <p class="expertise">Expertise: Science</p>
+          <p>Jane is a science enthusiast with a focus on physics and chemistry. She loves inspiring young minds.</p>
+        </div>
+      </div>
+
+      <!-- Mentor Card 3 -->
+      <div class="mentor-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYns2CZVlqh09w6FfvQi3civQ4gMcqz3EqWEF6UEOnB7AmhtYALSEbaXe2xw0iU5u2DyA&usqp=CAU" alt="Mentor 3">
+        <div class="mentor-card-content">
+          <h3>Alice Johnson</h3>
+          <p class="expertise">Expertise: Programming</p>
+          <p>Alice is a software engineer with expertise in Python, JavaScript, and web development.</p>
+        </div>
+      </div>
+
+      <!-- Mentor Card 4 -->
+      <div class="mentor-card">
+        <img src="https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg" alt="Mentor 4">
+        <div class="mentor-card-content">
+          <h3>Michael Brown</h3>
+          <p class="expertise">Expertise: Data Science</p>
+          <p>Michael is a data scientist with a passion for machine learning and data visualization.</p>
+        </div>
+      </div>
+
+      <!-- Mentor Card 5 -->
+      <div class="mentor-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAamDaT-T3NrHH7aBCu6k8ztu083JTY5Mo4w&s" alt="Mentor 5">
+        <div class="mentor-card-content">
+          <h3>Emily Davis</h3>
+          <p class="expertise">Expertise: Business Strategy</p>
+          <p>Emily is a business consultant with a focus on startups and entrepreneurship.</p>
+        </div>
+      </div>
+
+      <!-- Mentor Card 6 -->
+      <div class="mentor-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbwToef2521HrATF1viwwo1Zv27Qh_CI0Y_w&s" alt="Mentor 6">
+        <div class="mentor-card-content">
+          <h3>David Wilson</h3>
+          <p class="expertise">Expertise: Career Coaching</p>
+          <p>David helps students and professionals achieve their career goals through personalized coaching.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Mentorship Program. All rights reserved.</p>
+  </footer>
+</body>
+</html>
