@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments - Mentorship Program</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #6473B6;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .home-button {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 8px 16px;
+      background-color: #333;
+      border-radius: 5px;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .home-button:hover {
+      background-color: #555;
+    }
+
+    /* Payment Plans Section */
+    .payment-plans {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .payment-plans h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #6473B6;
+    }
+
+    .plans-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .plan-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .plan-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #6473B6;
+    }
+
+    .plan-card .price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .plan-card .price span {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .plan-card ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .plan-card ul li {
+      margin: 10px 0;
+      color: #666;
+    }
+
+    .plan-card button {
+      padding: 10px 20px;
+      background-color: #6473B6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .plan-card button:hover {
+      background-color: #45a049;
+    }
+
+    /* Payment Form Section */
+    .payment-form-section {
+      padding: 40px 20px;
+      background-color: white;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .payment-form-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #6473B6;
+      text-align: center;
+    }
+
+    .payment-form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .payment-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .payment-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .payment-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #6473B6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .payment-form button:hover {
+      background-color: #45a049;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="/" class="home-button">Home</a>
+    <h1>Payment Plans</h1>
+  </header>
+
+  <!-- Payment Plans Section -->
+  <section class="payment-plans">
+    <h2>Choose Your Plan</h2>
+    <div class="plans-grid">
+      <!-- Plan 1 -->
+      <div class="plan-card">
+        <h3>Basic Plan</h3>
+        <div class="price">$49<span>/month</span></div>
+        <ul>
+          <li>Access to 1 mentor</li>
+          <li>Weekly 1-on-1 sessions</li>
+          <li>Email support</li>
+        </ul>
+        <button onclick="selectPlan('Basic Plan')">Select Plan</button>
+      </div>
+
+      <!-- Plan 2 -->
+      <div class="plan-card">
+        <h3>Standard Plan</h3>
+        <div class="price">$99<span>/month</span></div>
+        <ul>
+          <li>Access to 3 mentors</li>
+          <li>Weekly 1-on-1 sessions</li>
+          <li>Priority email support</li>
+          <li>Exclusive resources</li>
+        </ul>
+        <button onclick="selectPlan('Standard Plan')">Select Plan</button>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="plan-card">
+        <h3>Premium Plan</h3>
+        <div class="price">$149<span>/month</span></div>
+        <ul>
+          <li>Access to all mentors</li>
+          <li>Unlimited 1-on-1 sessions</li>
+          <li>24/7 priority support</li>
+          <li>Exclusive resources</li>
+          <li>Certification</li>
+        </ul>
+        <button onclick="selectPlan('Premium Plan')">Select Plan</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment Form Section -->
+  <section class="payment-form-section">
+    <h2>Enter Payment Details</h2>
+    <form class="payment-form" onsubmit="handlePayment(event)">
+      <label for="cardName">Name on Card</label>
+      <input type="text" id="cardName" placeholder="John Doe" required>
+
+      <label for="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+
+      <label for="expiryDate">Expiry Date</label>
+      <input type="text" id="expiryDate" placeholder="MM/YY" required>
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" placeholder="123" required>
+
+      <button type="submit">Complete Payment</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Mentorship Program. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Function to handle plan selection
+    function selectPlan(planName) {
+      alert(`You have selected the ${planName}. Please enter your payment details.`);
+    }
+
+    // Function to handle payment submission
+    function handlePayment(event) {
+      event.preventDefault();
+      const cardName = document.getElementById('cardName').value;
+      alert(`Thank you, ${cardName}! Your payment has been processed successfully.`);
+      // Clear the form
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
