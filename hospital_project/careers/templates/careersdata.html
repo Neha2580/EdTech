@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #6473B6;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Careers data</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Position Name</th>
+        <th>Recruting Manager</th>
+        <th>Hiring Manager</th>
+        <th>opening Date Name</th>
+        <th>closed Date</th>
+        <th>notes</th>
+        <th>status</th>
+        <th>Department</th>
+        <th>Base Salary</th>
+        <th>Result</th>
+    </tr>
+    {% for career in cdata %}
+    <tr>
+        <td>{{ career.id }}</td>
+        <td>{{ career.positionname }}</td>
+        <td>{{ career.recrutingManager }}</td>
+        <td>{{ career.hiringManager }}</td>
+        <td>{{ career.openingDate }}</td>
+        <td>{{ career.closedDate }}</td>
+        <td>{{ career.notes }}</td>
+        <td>{{ career.status }}</td>
+        <td>{{ career.department }}</td>
+        <td>{{ career.baseSalary }}</td>
+        <td>{{ career.result }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="3">No users found.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

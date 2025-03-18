@@ -1,4 +1,5 @@
 from django.urls import path
 from . import views
 
-urlpatterns = [path('payments/', views.payments, name='payments'),]
+urlpatterns = [path('payment/', views.payment, name='payment'),
+               path('paymentsdata/', views.paymentsdata, name='paymentsdata'),]
