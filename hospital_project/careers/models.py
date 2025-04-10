@@ -12,5 +12,9 @@ class positions(models.Model):
     department = models.CharField(max_length=255)
     baseSalary = models.IntegerField(null= True)
     result = models.CharField(max_length=255)
+
+
+    def __str__(self):
+        return f"{self.positionname} {self.baseSalary} {self.department}"
     
     

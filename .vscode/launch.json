@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to Chrome",
+            "port": 8000,
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://127.0.0.1:8000",
+            "webRoot": "${workspaceFolder}/hospital_project"
+        },
+        {
+            "name": "Django",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/hospital_project/manage.py",
+            "args": [
+                "runserver",
+            ],
+            "django": true,
+            "justMyCode": true,
+            "console": "integratedTerminal",
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "hospital_project.settings"
+            },
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
