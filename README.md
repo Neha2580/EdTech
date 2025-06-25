@@ -1,6 +1,6 @@
 # EdTech
 Edtech Portal with Django framework
-Django is awesome
+
 Home Page
 ![image](https://github.com/user-attachments/assets/ee7f0352-8460-46e8-92c8-b1ed9fe453bf)
 ![image](https://github.com/user-attachments/assets/dbc1e733-3b3f-4a1f-903c-b1659e71b0e8)
